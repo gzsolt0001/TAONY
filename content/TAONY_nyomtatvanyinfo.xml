@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Nyomtatvanyinfo xmlns="https://soap.api.nav.gov.hu/external/webnyk/nyomtatvanyinfo/1.0" version="14.0">
+    <BoritekParameter>
+        <Kulcs>idoszaktol</Kulcs>
+        <Ertek>replace(//Block_120010/FieldGroup_120011/Field_0A0001F001A, '-', '')</Ertek>
+    </BoritekParameter>
+    <BoritekParameter>
+        <Kulcs>adoszam</Kulcs>
+        <Ertek>//Block_120001/FieldGroup_120002/Field_0A0001E001A</Ertek>
+    </BoritekParameter>
+    <BoritekParameter>
+        <Kulcs>idoszakig</Kulcs>
+        <Ertek>replace(//Block_120010/FieldGroup_120011/Field_0A0001F002A, '-', '')</Ertek>
+    </BoritekParameter>
+    <BoritekParameter>
+        <Kulcs>elozmeny</Kulcs>
+        <Ertek>//Block_120010/FieldGroup_120017/Field_0A0001E002A</Ertek>
+    </BoritekParameter>
+    <Nyomtatvanyinformacio>
+        <Adozo>
+            <Nev>//Block_120001/FieldGroup_120002/Field_0A0001E004A</Nev>
+            <Adoszam>//Block_120001/FieldGroup_120002/Field_0A0001E001A</Adoszam>
+        </Adozo>
+    </Nyomtatvanyinformacio>
+    <CsatolmanyInformacio>serialize(array {/*:Doc_TAONY/*[local-name() = ('Form_TAONY')]/*[starts-with(local-name(), 'Attachment')]!map {"fileId":  string(fileId),"fileName":  string(fileName),"fileSize": xs:long(string(fileSize))}},map{"method":"json"} )</CsatolmanyInformacio>
+    <KrCimzett>NAV</KrCimzett>
+</Nyomtatvanyinfo>

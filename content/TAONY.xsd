@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
         xmlns:meta="https://api.nav.gov.hu/definitions/form_xsd_metaschema/1.0"
-        xmlns:tns="https://soap.api.nav.gov.hu/definitions/model/2.0/TAONY/14.0"
+        xmlns:tns="https://soap.api.nav.gov.hu/definitions/model/2.0/TAONY/14.0.0"
         xmlns:xs="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        targetNamespace="https://soap.api.nav.gov.hu/definitions/model/2.0/TAONY/14.0">
+        targetNamespace="https://soap.api.nav.gov.hu/definitions/model/2.0/TAONY/14.0.0">
    <import namespace="https://api.nav.gov.hu/definitions/form_xsd_metaschema/1.0"
            schemaLocation="form_xsd_metaschema.xsd"/>
    <element name="Doc_TAONY"
@@ -35,8 +35,16 @@
          <documentation>Enum értékek </documentation>
       </annotation>
       <restriction base="xs:string">
-         <enumeration value="I"/>
-         <enumeration value="N"/>
+         <enumeration value="I">
+            <annotation>
+               <documentation>I=IGEN</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="N">
+            <annotation>
+               <documentation>N=NEM</documentation>
+            </annotation>
+         </enumeration>
       </restriction>
    </simpleType>
    <simpleType name="Enum_TAONY_0A0001F003A">
@@ -44,7 +52,11 @@
          <documentation>Enum értékek </documentation>
       </annotation>
       <restriction base="xs:string">
-         <enumeration value="H"/>
+         <enumeration value="H">
+            <annotation>
+               <documentation>H=Adózói javítás (helyesbítés)</documentation>
+            </annotation>
+         </enumeration>
       </restriction>
    </simpleType>
    <simpleType name="Enum_TAONY_egyseges_helyseg_1">
@@ -3329,7 +3341,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="80"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -3350,7 +3362,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="80"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -3364,7 +3376,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="40"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -3385,7 +3397,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="80"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>
@@ -3413,7 +3425,7 @@
                <restriction base="string">
                   <minLength value="1"/>
                   <maxLength value="40"/>
-                  <pattern value="\P{C}+"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
                </restriction>
             </simpleType>
          </element>

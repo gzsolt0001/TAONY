@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Nyomtatvanyinfo xmlns="https://soap.api.nav.gov.hu/external/webnyk/nyomtatvanyinfo/1.0" version="14.0">
+<Nyomtatvanyinfo xmlns="https://soap.api.nav.gov.hu/external/webnyk/nyomtatvanyinfo/1.0" version="14.0.0">
     <BoritekParameter>
         <Kulcs>idoszaktol</Kulcs>
         <Ertek>replace(//Block_120010/FieldGroup_120011/Field_0A0001F001A, '-', '')</Ertek>
